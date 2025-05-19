@@ -5,11 +5,11 @@ import TravelBackground from '@/components/TravelBackground';
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center p-4 md:p-8 relative bg-gradient-to-b from-white via-india-teal/5 to-india-orange/5">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center p-4 md:p-8 relative bg-gradient-to-b from-white via-purple-50 to-pink-50">
       <TravelBackground />
       
       <header className="text-center mb-8 max-w-2xl px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-india-teal mb-3">Incredible-Bot</h1>
+        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-3">Incredible-Bot</h1>
         <p className="text-gray-600 text-lg">Your travel companion for exploring incredible destinations</p>
       </header>
       

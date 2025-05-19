@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, MapPin, Calendar, Compass, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -121,7 +122,7 @@ const TravelChatbot: React.FC = () => {
   return (
     <div className="flex flex-col bg-white shadow-xl h-[600px] w-full max-w-3xl mx-auto rounded-xl overflow-hidden border border-gray-200">
       {/* Header */}
-      <div className="bg-gradient-to-r from-india-teal to-india-blue p-4 text-white flex items-center justify-between">
+      <div className="bg-gradient-to-r from-purple-600 to-pink-500 p-4 text-white flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="relative">
             <ChatbotAvatar 
@@ -137,7 +138,7 @@ const TravelChatbot: React.FC = () => {
       </div>
       
       {/* Background pattern */}
-      <div className="flex-1 overflow-y-auto p-4 bg-gray-50 india-pattern-bg">
+      <div className="flex-1 overflow-y-auto p-4 bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Messages container */}
         <div className="flex flex-col">
           {messages.map((msg) => (
@@ -170,7 +171,7 @@ const TravelChatbot: React.FC = () => {
       
       {/* Quick reply buttons */}
       {messages.length > 0 && !isTyping && (
-        <div className="bg-white px-4 py-2 overflow-x-auto border-t border-gray-100">
+        <div className="bg-white px-4 py-2 overflow-x-auto border-t border-purple-100">
           <div className="flex gap-2 pb-1 overflow-x-auto no-scrollbar">
             {quickReplies.map((reply) => (
               <QuickReplyButton
@@ -191,19 +192,19 @@ const TravelChatbot: React.FC = () => {
       )}
       
       {/* Input area */}
-      <div className="p-4 bg-white border-t border-gray-100 flex items-center gap-2">
+      <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 border-t border-purple-100 flex items-center gap-2">
         <Input
           ref={inputRef}
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
           placeholder="Ask about traveling..."
-          className="flex-1 bg-gray-50 border-gray-200"
+          className="flex-1 bg-white border-purple-200"
         />
         <Button 
           onClick={handleSendMessage} 
           size="icon"
-          className="bg-india-teal hover:bg-india-teal/80 text-white"
+          className="bg-purple-600 hover:bg-purple-700 text-white"
         >
           <Send className="h-4 w-4" />
         </Button>

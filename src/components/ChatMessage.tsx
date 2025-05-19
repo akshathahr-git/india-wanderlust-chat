@@ -20,7 +20,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
   return (
     <div 
       className={cn(
-        "flex items-start gap-3 mb-4 chat-bubble-animation",
+        "flex items-start gap-3 mb-4",
         isUser ? "flex-row-reverse" : "flex-row"
       )}
     >
@@ -30,10 +30,10 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
           {showAvatar}
         </div>
       ) : (
-        <div className="w-10 h-10 rounded-full bg-india-blue/10 flex items-center justify-center">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center shadow-sm">
           <span className={cn(
             "text-lg font-bold",
-            isUser ? "text-india-blue" : "text-india-orange"
+            isUser ? "text-purple-600" : "text-pink-600"
           )}>
             {isUser ? "U" : "I"}
           </span>
@@ -44,14 +44,14 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
       <div className={cn(
         "max-w-[80%] rounded-2xl px-4 py-3 shadow-sm",
         isUser 
-          ? "bg-india-blue text-white rounded-tr-none" 
-          : "bg-white border border-gray-100 rounded-tl-none"
+          ? "bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-tr-none" 
+          : "bg-gradient-to-r from-white to-purple-50 border border-purple-100 rounded-tl-none"
       )}>
         {isTyping ? (
           <div className="flex space-x-1 h-6 items-center">
-            <div className="w-2 h-2 bg-gray-400 rounded-full typing-dot"></div>
-            <div className="w-2 h-2 bg-gray-400 rounded-full typing-dot"></div>
-            <div className="w-2 h-2 bg-gray-400 rounded-full typing-dot"></div>
+            <div className="w-2 h-2 bg-purple-300 rounded-full"></div>
+            <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
           </div>
         ) : (
           <div>
@@ -64,7 +64,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
             {timestamp && (
               <p className={cn(
                 "text-xs mt-1",
-                isUser ? "text-blue-100" : "text-gray-400"
+                isUser ? "text-purple-200" : "text-purple-400"
               )}>
                 {timestamp}
               </p>
