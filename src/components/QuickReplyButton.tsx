@@ -19,13 +19,13 @@ const QuickReplyButton: React.FC<QuickReplyButtonProps> = ({
     <button
       onClick={onClick}
       className={cn(
-        "text-sm px-4 py-2 rounded-full border border-india-orange/30 bg-white",
-        "hover:bg-india-orange/10 transition-colors duration-200",
-        "flex items-center gap-2 shadow-sm hover:shadow",
+        "text-sm px-4 py-2 rounded-full border border-india-teal/30 bg-white",
+        "hover:bg-india-teal/5 hover:border-india-teal/50 transition-colors duration-200",
+        "flex items-center gap-2 shadow-sm",
         className
       )}
     >
-      {icon && <span>{icon}</span>}
+      {icon && <span className="text-india-teal">{icon}</span>}
       <span>{text}</span>
     </button>
   );
