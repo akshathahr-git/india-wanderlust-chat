@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect, useRef } from 'react';
-import { Send, MapPin, Calendar, Compass, Sword } from 'lucide-react';
+import { Send, MapPin, Calendar, Compass, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
@@ -121,22 +122,22 @@ const TravelChatbot: React.FC = () => {
   }, [messages, isTyping]);
 
   return (
-    <div className="flex flex-col bg-gray-50 h-[600px] max-w-md w-full mx-auto rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-map-unfold">
+    <div className="flex flex-col bg-gray-50 h-[500px] max-w-2xl w-full mx-auto rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-map-unfold">
       {/* Header */}
-      <div className="travel-gradient p-4 text-white flex items-center justify-between">
+      <div className="travel-gradient p-3 text-white flex items-center justify-between">
         <div className="flex items-center gap-3 animate-fly-in">
           <div className="relative">
             <ChatbotAvatar 
               showWave={showWelcomeAnimation} 
-              className="h-12 w-12" 
+              className="h-10 w-10" 
             />
           </div>
           <div>
-            <h2 className="font-bold text-lg">Incredible India Guide</h2>
+            <h2 className="font-bold text-lg">Incredible-Bot</h2>
             <p className="text-xs opacity-80">Your virtual travel companion</p>
           </div>
         </div>
-        <Sword className="h-6 w-6 text-white/80 animate-spin-slow" />
+        <Globe className="h-6 w-6 text-white/80 animate-spin-slow" />
       </div>
       
       {/* Background pattern */}
@@ -150,7 +151,7 @@ const TravelChatbot: React.FC = () => {
               isUser={msg.isUser}
               timestamp={msg.timestamp}
               showAvatar={!msg.isUser ? 
-                <ChatbotAvatar className="h-10 w-10" /> : 
+                <ChatbotAvatar className="h-8 w-8" /> : 
                 undefined
               }
             />
@@ -162,7 +163,7 @@ const TravelChatbot: React.FC = () => {
               message=""
               isUser={false}
               isTyping={true}
-              showAvatar={<ChatbotAvatar isThinking={true} className="h-10 w-10" />}
+              showAvatar={<ChatbotAvatar isThinking={true} className="h-8 w-8" />}
             />
           )}
           
@@ -200,7 +201,7 @@ const TravelChatbot: React.FC = () => {
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
-          placeholder="Ask about traveling in India..."
+          placeholder="Ask about traveling..."
           className="flex-1 bg-gray-50 border-gray-200"
         />
         <Button 
