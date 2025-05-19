@@ -1,16 +1,43 @@
 
 import React from 'react';
+import { Airplane, Map, World, Suitcase, Mountain, Beach } from 'lucide-react';
 
 const TravelBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 z-[-1] overflow-hidden">
-      {/* India-themed pattern */}
-      <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-india-blue/5 to-transparent"></div>
+      {/* India-themed gradient background */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-india-blue/5 via-white to-india-orange/5"></div>
       
-      {/* Decorative elements */}
-      <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-india-orange/10 animate-float"></div>
-      <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-india-teal/10 animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-20 left-1/4 w-20 h-20 rounded-full bg-india-yellow/10 animate-float" style={{ animationDelay: '1.5s' }}></div>
+      {/* Travel-themed decorative elements with improved animations */}
+      <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-india-orange/10 travel-float">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Airplane className="h-10 w-10 text-india-orange/30 animate-pulse" />
+        </div>
+      </div>
+      
+      <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-india-teal/10 travel-float" style={{ animationDelay: '1s' }}>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <World className="h-14 w-14 text-india-teal/30 animate-spin-slow" />
+        </div>
+      </div>
+      
+      <div className="absolute bottom-20 left-1/4 w-20 h-20 rounded-full bg-india-yellow/10 travel-float" style={{ animationDelay: '1.5s' }}>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Map className="h-8 w-8 text-india-yellow/30 animate-pulse" style={{ animationDelay: '0.7s' }} />
+        </div>
+      </div>
+
+      <div className="absolute top-1/3 right-1/4 w-16 h-16 rounded-full bg-india-green/10 travel-float" style={{ animationDelay: '2.2s' }}>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Mountain className="h-8 w-8 text-india-green/30 animate-pulse" style={{ animationDelay: '1.3s' }} />
+        </div>
+      </div>
+
+      <div className="absolute bottom-1/3 left-10 w-28 h-28 rounded-full bg-india-blue/10 travel-float" style={{ animationDelay: '0.8s' }}>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Beach className="h-12 w-12 text-india-blue/30 animate-pulse" style={{ animationDelay: '1.8s' }} />
+        </div>
+      </div>
       
       {/* Landmark silhouettes */}
       <div className="absolute bottom-0 left-0 w-full h-40 bg-contain bg-bottom bg-no-repeat opacity-10">

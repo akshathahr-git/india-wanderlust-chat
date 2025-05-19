@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Send, MapPin, Calendar, Compass } from 'lucide-react';
+import { Send, MapPin, Calendar, Compass, World } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
@@ -122,10 +122,10 @@ const TravelChatbot: React.FC = () => {
   }, [messages, isTyping]);
 
   return (
-    <div className="flex flex-col bg-gray-50 h-[600px] max-w-md w-full mx-auto rounded-xl shadow-lg overflow-hidden border border-gray-100">
+    <div className="flex flex-col bg-gray-50 h-[600px] max-w-md w-full mx-auto rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-map-unfold">
       {/* Header */}
-      <div className="bg-india-gradient p-4 text-white flex items-center justify-between">
-        <div className="flex items-center gap-3">
+      <div className="travel-gradient p-4 text-white flex items-center justify-between">
+        <div className="flex items-center gap-3 animate-fly-in">
           <div className="relative">
             <ChatbotAvatar 
               showWave={showWelcomeAnimation} 
@@ -137,6 +137,7 @@ const TravelChatbot: React.FC = () => {
             <p className="text-xs opacity-80">Your virtual travel companion</p>
           </div>
         </div>
+        <World className="h-6 w-6 text-white/80 animate-spin-slow" />
       </div>
       
       {/* Background pattern */}
@@ -206,7 +207,7 @@ const TravelChatbot: React.FC = () => {
         <Button 
           onClick={handleSendMessage} 
           size="icon"
-          className="bg-india-orange hover:bg-india-orange/80 text-white"
+          className="bg-india-teal hover:bg-india-teal/80 text-white"
         >
           <Send className="h-4 w-4" />
         </Button>
