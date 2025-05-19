@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { World, Suitcase, Map } from 'lucide-react';
+import { Sword, Map, Plane } from 'lucide-react';
 
 type ChatbotAvatarProps = {
   isThinking?: boolean;
@@ -41,14 +41,14 @@ const ChatbotAvatar: React.FC<ChatbotAvatarProps> = ({
             "absolute transition-all duration-500",
             animationState === 0 ? "opacity-100 scale-100" : "opacity-0 scale-75"
           )}>
-            <World className="h-10 w-10 text-india-blue stroke-[1.5]" />
+            <Sword className="h-10 w-10 text-india-blue stroke-[1.5]" />
           </div>
           
           <div className={cn(
             "absolute transition-all duration-500",
             animationState === 1 ? "opacity-100 scale-100" : "opacity-0 scale-75"
           )}>
-            <Suitcase className="h-10 w-10 text-india-orange stroke-[1.5]" />
+            <Plane className="h-10 w-10 text-india-orange stroke-[1.5]" />
           </div>
           
           <div className={cn(

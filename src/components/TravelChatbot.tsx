@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect, useRef } from 'react';
-import { Send, MapPin, Calendar, Compass, World } from 'lucide-react';
+import { Send, MapPin, Calendar, Compass, Sword } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
@@ -137,7 +136,7 @@ const TravelChatbot: React.FC = () => {
             <p className="text-xs opacity-80">Your virtual travel companion</p>
           </div>
         </div>
-        <World className="h-6 w-6 text-white/80 animate-spin-slow" />
+        <Sword className="h-6 w-6 text-white/80 animate-spin-slow" />
       </div>
       
       {/* Background pattern */}

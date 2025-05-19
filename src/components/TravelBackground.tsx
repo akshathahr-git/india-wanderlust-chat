@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Airplane, Map, World, Suitcase, Mountain, Beach } from 'lucide-react';
+import { Airplay, Map, Sword, Plane, Mountain } from 'lucide-react';
 
 const TravelBackground: React.FC = () => {
   return (
@@ -11,13 +11,13 @@ const TravelBackground: React.FC = () => {
       {/* Travel-themed decorative elements with improved animations */}
       <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-india-orange/10 travel-float">
         <div className="absolute inset-0 flex items-center justify-center">
-          <Airplane className="h-10 w-10 text-india-orange/30 animate-pulse" />
+          <Airplay className="h-10 w-10 text-india-orange/30 animate-pulse" />
         </div>
       </div>
       
       <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-india-teal/10 travel-float" style={{ animationDelay: '1s' }}>
         <div className="absolute inset-0 flex items-center justify-center">
-          <World className="h-14 w-14 text-india-teal/30 animate-spin-slow" />
+          <Sword className="h-14 w-14 text-india-teal/30 animate-spin-slow" />
         </div>
       </div>
       
@@ -35,7 +35,7 @@ const TravelBackground: React.FC = () => {
 
       <div className="absolute bottom-1/3 left-10 w-28 h-28 rounded-full bg-india-blue/10 travel-float" style={{ animationDelay: '0.8s' }}>
         <div className="absolute inset-0 flex items-center justify-center">
-          <Beach className="h-12 w-12 text-india-blue/30 animate-pulse" style={{ animationDelay: '1.8s' }} />
+          <Plane className="h-12 w-12 text-india-blue/30 animate-pulse" style={{ animationDelay: '1.8s' }} />
         </div>
       </div>
       
